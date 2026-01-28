@@ -20,8 +20,8 @@ android {
     buildToolsVersion = Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 110
-        versionName "1.72.0"
+        versionCode 202601
+        versionName "2026.01.0"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
         base.archivesName = "Fahrplan-$versionName"
@@ -44,9 +44,9 @@ android {
         buildConfigField "String", "EVENT_POSTAL_ADDRESS", '""'
         buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
         buildConfigField "String", "C3NAV_URL", '""'
-        buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "false"
-        buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "false"
-        buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "false"
+        buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
+        buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+        buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
         resValue("string", "engelsystem_alias", "Engelsystem")
         resValue("string", "engelsystem_shifts_alias", "Engelshifts")
         resValue("string", "preference_hint_engelsystem_json_export_url", '""')
@@ -57,6 +57,9 @@ android {
         buildConfigField "boolean", "ENABLE_FOSDEM_ROOM_STATES", "false"
         buildConfigField "String", "FOSDEM_ROOM_STATES_URL", '""'
         buildConfigField "String", "FOSDEM_ROOM_STATES_PATH", '""'
+
+
+       
     }
 
     buildFeatures {
@@ -132,7 +135,46 @@ android {
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#38c3 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+38c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
-        }
+       
+           }
+
+        cfgmgmtcamp2026 {
+            dimension defaultDimension
+            applicationId "info.metadude.android.cfgmgmtcamp.schedule"
+            versionName "${defaultConfig.versionName}-CfgMgmtCamp2026"
+
+            // Store URLs for schedule, feedback, and resources
+            buildConfigField "String", "SCHEDULE_URL", '"https://cfp.cfgmgmtcamp.org/ghent2026/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://cfgmgmtcamp.org/ghent2026/"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Gebouw B HoGent - Campus SchoonMeersen, Valentin Vaerwyckweg 1, 9000 Gent, +32 9 243 87 87, https://hogent.be"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.cfgmgmtcamp.schedule"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"youremail@domain.com"'  
+            buildConfigField "String", "F_DROID_URL", '""'
+
+
+
+            // Feature flags
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
+            buildConfigField "String", "C3NAV_URL", '""'
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://volunteer.cfgmgmtcamp.org/shifts-json-export?key=YOUR_KEY"')
+
+            // Social & feedback
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#cfgmgmtcamp2026"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://cfp.cfgmgmtcamp.org/ghent2026/schedule/export/schedule.xml"'
+
+            // Optional display names
+            resValue("string", "engelsystem_alias", "Engelsystem")
+            resValue("string", "engelsystem_shifts_alias", "Engelshifts")
+
+
+
+ }
     }
 
     productFlavors.configureEach { flavor ->

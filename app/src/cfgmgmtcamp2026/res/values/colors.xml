@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text colors -->
+    <color name="text_primary">#000000</color> <!-- black text on light backgrounds -->
+    <color name="text_secondary">#3D3D3D</color> <!-- softer black -->
+
+    <!-- Brand colors -->
+    <color name="colorPrimary">#2596BE</color>       <!-- logo blue -->
+    <color name="colorPrimaryDark">#1A7599</color>  <!-- darker blue -->
+    <color name="colorAccent">#3D9141</color>       <!-- logo green -->
+
+    <!-- Background -->
+    <color name="windowBackground">#FFFFFF</color> <!-- pure white for visibility -->
+
+    <!-- Links -->
+    <color name="text_link_on_light">#2596BE</color> <!-- blue links -->
+
+    <!-- Multi-select background -->
+    <color name="multi_choice_background">#3D9141</color> <!-- green -->
+
+    <!-- Session details -->
+    <color name="session_details_list_item">@color/colorPrimaryDark</color>
+    <color name="session_detailbar_background">@color/colorPrimary</color>
+    <color name="session_detailbar_text">#FFFFFF</color>
+    <color name="session_detailbar_icon">@color/colorAccent</color>
+
+</resources>
+

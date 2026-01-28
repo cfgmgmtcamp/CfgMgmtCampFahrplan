@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CfgMgmtCamp 2026 specific configuration -->
+    <string name="conference_name" translatable="false">CfgMgmtCamp</string>
+    <string name="conference_url" translatable="false">https://cfgmgmtcamp.eu/</string>
+    <string name="alternative_schedule_url" translatable="false">https://pretalx.cfgmgmtcamp.be/cfgmgmtcamp-2026/schedule/export/schedule.xml</string>
+    <string name="alternative_schedule_url_default" translatable="false">https://pretalx.cfgmgmtcamp.be/cfgmgmtcamp-2026/schedule/export/schedule.xml</string>
+    <bool name="bundle_key_schedule_url_updated_default_value">false</bool>
+    
+    <!-- Event configuration -->
+    <string name="event_name">Config Management Camp 2026</string>
+    <string name="frab_url">https://program.cfgmgmtcamp.eu/cfgmgmtcamp2026/schedule.xml</string>
+    <string name="alternative_frab_urls"></string>
+    <string name="alternative_schedule_urls"></string>
+    <string name="alternative_frab_xml_urls"></string>
+    <string name="event_subtitle">Ghent, Belgium</string>
+    <string name="event_timezone">Europe/Brussels</string>
+    <string name="event_days">3</string>
+    <string name="default_language">en</string>
+    <string name="event_postal_address">Gebouw B HoGent - Campus SchoonMeersen, Valentin Vaerwyckweg 1, 9000 Gent, https://hogent.be</string>
+    <string name="alternative_feedback_urls"></string>
+    <string name="alternative_map_urls"></string>
+    <string name="alternative_c3nav_urls"></string>
+    <string name="alternative_news_urls"></string>
+    <string name="alternative_calendar_urls"></string>
+    <string name="alternative_irc_urls"></string>
+</resources>

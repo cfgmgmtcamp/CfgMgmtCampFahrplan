@@ -75,12 +75,15 @@ private fun EventInfo(parameter: AboutParameter, onViewEvent: (AboutViewEvent) -
         horizontalAlignment = CenterHorizontally
     ) {
         val horizontalTextAlign = TextAlign.Center
-        Image(
-            modifier = Modifier
-                .padding(vertical = 16.dp),
-            painter = painterResource(R.drawable.dialog_logo),
-            contentDescription = stringResource(R.string.about_logo_content_description)
-        )
+    
+  Image(
+    modifier = Modifier
+        .padding(vertical = 16.dp),
+    painter = painterResource(R.drawable.logocfgmgmt),
+    contentDescription = stringResource(R.string.about_logo_content_description)
+    )
+
+
         if (parameter.title.isNotEmpty()) {
             Text(
                 modifier = Modifier.padding(bottom = 4.dp),
@@ -262,12 +265,12 @@ private fun SectionDivider() {
 private fun AboutScreenPreview() {
     AboutScreen(
         AboutParameter(
-            title = "37th Chaos Communication Congress",
-            subtitle = "Unlocked",
-            eventLocation = PostalAddress("CCH, Congressplatz 1, 20355 Hamburg"),
-            eventUrl = Html.of("https://events.ccc.de/congress/2023/"),
-            scheduleVersion = "Fahrplan BAD NETWORK/FIREWALL",
-            appVersion = "App Version 1.63.2 Kaus Australis; lounges 909; lightning Manwë; thms Tales of Monkey Island; wiki 2023-12-28 12:11",
+            title = "CFG Management Camp 2026",
+            subtitle = "Ghent Edition",
+            eventLocation = PostalAddress("Gebouw B HoGent - Campus SchoonMeersen\nValentin Vaerwyckweg 1\n9000 Gent\n+32 9 243 87 87"),
+            eventUrl = Html.of("https://cfgmgmtcamp.org/ghent2026/"),
+            scheduleVersion = "Schedule Version: Ghent 2026",
+            appVersion = "App Version ${BuildConfig.VERSION_NAME}",
             usageNote = stringResource(R.string.usage),
             appDisclaimer = stringResource(R.string.app_disclaimer),
             logoCopyright = Html.of(stringResource(R.string.copyright_logo)),

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CfgMgmtCamp</string>
+    <string name="app_hardcoded_subtitle"/>
+    <string name="copyright_logo">
+        <![CDATA[CfgMgmtCamp Ghent]]>
+    </string>
+    <string name="about_logo_content_description">
+        CfgMgmtCamp logo
+    </string>
+</resources>
